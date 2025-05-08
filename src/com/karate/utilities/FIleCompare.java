@@ -6,7 +6,7 @@ public class FIleCompare {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String folderPath = "./src/com/cognizant/reports/actualPDFs";
+		String folderPath = "./src/com/karate/reports/actualPDFs";
 		File folder = new File(folderPath);
 		File[] files = folder.listFiles();
 		for (File file : files) {

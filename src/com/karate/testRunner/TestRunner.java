@@ -1,4 +1,4 @@
-package com.cognizant.testRunner;
+package com.karate.testRunner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -10,8 +10,6 @@ public class TestRunner {
 
 	@Test
 	void executeTest() {
-	//	ExcelHandling.storeDataDetails();
-	//	ExcelHandling.getExecutableScenariosWithIteratios();
 		Results results = Runner.path("classpath:")
 				.tags("Corporate")
 				.parallel(1);
