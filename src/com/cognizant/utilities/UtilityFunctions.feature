@@ -1,13 +1,14 @@
 Feature: Utility Functions
 
 Background:
-* def coreFunctions = 'classpath:com/karate/reusables/CoreFunctions.feature@'
-* def utilityFunctions = 'classpath:com/karate/reusables/UtilityFunctions.feature@'
+* def coreFunctions = 'classpath:com/cognizant/reusables/CoreFunctions.feature@'
+* def utilityFunctions = 'classpath:com/cognizant/reusables/UtilityFunctions.feature@'
 
 
 @getObjects
 Scenario: Read Object file
-* def testData = Java.type('com.karate.utilities.ExcelHandling').jsonObject
+* def testData = Java.type('com.cognizant.utilities.ExcelHandling').jsonObject
+#* def testData = read('file:C:/Users/821988/eclipse-workspace/SLC_Automation/data.json')
 * def readObjects =
 """
 function(path) {
@@ -17,7 +18,7 @@ function(path) {
   return props;
 }
 """
-* def objects = readObjects('classpath:com/karate/objects/CommonOR.properties')
+* def objects = readObjects('classpath:com/cognizant/objects/CommonOR.properties')
 * def scrollDown =
 """
 function(count){

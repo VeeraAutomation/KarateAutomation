@@ -1,4 +1,4 @@
-package com.karate.utilities;
+package com.cognizant.utilities;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -148,7 +148,7 @@ public class ExcelHandling {
         try
         {
             // Get the output file absolute path.
-            String filePath = "./src/com/karate/resources/"+sheetName+".json";
+            String filePath = "./src/com/cognizant/resources/"+sheetName+".json";
 
             // Create File, FileWriter and BufferedWriter object.
             File file = new File(filePath);

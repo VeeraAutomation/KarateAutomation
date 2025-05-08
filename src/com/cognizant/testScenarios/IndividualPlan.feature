@@ -2,10 +2,10 @@ Feature: IndividualPlan
 
 @ignore @setup
 Scenario:
-* def data = read('classpath:com/karate/resources/Individual.json')
+* def data = read('classpath:com/cognizant/resources/Individual.json')
 * print 'Setup'
 
-@Regression
+@Vita @Sanity @Regression
 Scenario: VitalityPlan
 # Launch the application
 * def readProperties =
@@ -20,10 +20,10 @@ function(path) {
 * print karate.properties['user.dir']
 * def props = readProperties('file://'+karate.properties['user.dir']+'/configs.properties')
 * print props.RunExcelData
-@Regression
+@Vitality @Regression
 Scenario Outline: VitalityPlan
 * def sName = 'VitalityPlan'
-* def testData = read('classpath:com/karate/resources/SYMD.json')
+* def testData = read('classpath:com/cognizant/resources/SYMD.json')
 * print '<sName>'
 * def sn ='<sName>'
 * print sn
@@ -31,7 +31,7 @@ Scenario Outline: VitalityPlan
 #* def runData = karate.setup().testData
 #* print runData
 #* print runData[sn].Gender
-* call read('classpath:com/karate/testScenarios/Corporate.feature@data')
+* call read('classpath:com/cognizant/testScenarios/Corporate.feature@data')
 
 Examples:
 | karate.setup().data |
